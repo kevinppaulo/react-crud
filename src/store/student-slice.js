@@ -4,11 +4,6 @@ const studentSlice = createSlice({
   name: "students",
 
   initialState: [{
-    id: 1,
-    name: "John Doe",
-    phone: "123-456-7890",
-    address: "123 Main St",
-    picture: "https://picsum.photos/200",
   }],
 
   reducers: {
