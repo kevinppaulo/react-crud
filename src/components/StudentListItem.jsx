@@ -22,10 +22,12 @@ function StudentListItem({ student }) {
     navigate("/list");
   };
 
+  const fallbackImage = "https://www.gravatar.com/avatar/?d=mp";
+
   return (
     <Link to={editLink} style={{ textDecoration: "none" }}>
       <ListGroup.Item>
-        <Image src={student.photo} roundedCircle width={40} height={40} style={{ marginRight: "2rem", objectFit: "cover" }} />
+        <Image src={student?.photo || fallbackImage} roundedCircle width={40} height={40} style={{ marginRight: "2rem", objectFit: "cover" }} />
         <span>{student.name}</span>
         <Button title="Excluir estudante" onClick={onDeleteClicked} variant="light" style={{ position: "absolute",  right: "1rem" }} >
           <i className="fa-solid fa-trash-can text-danger" ></i>
